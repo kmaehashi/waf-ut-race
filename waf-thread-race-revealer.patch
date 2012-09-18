@@ -1,0 +1,12 @@
+diff -Naru .waf-1.7.2-89df5661dd0948598701ec3b9c0a4216.orig/waflib/Tools/waf_unit_test.py .waf-1.7.2-89df5661dd0948598701ec3b9c0a4216/waflib/Tools/waf_unit_test.py
+--- .waf-1.7.2-89df5661dd0948598701ec3b9c0a4216.orig/waflib/Tools/waf_unit_test.py	2012-09-19 03:34:07.027514564 +0900
++++ .waf-1.7.2-89df5661dd0948598701ec3b9c0a4216/waflib/Tools/waf_unit_test.py	2012-09-19 03:34:29.017698064 +0900
+@@ -31,6 +31,8 @@
+ 		except AttributeError:
+ 			fu=os.environ.copy()
+ 			self.generator.bld.all_test_paths=fu
++			import time
++			time.sleep(3);
+ 			lst=[]
+ 			for g in self.generator.bld.groups:
+ 				for tg in g:
